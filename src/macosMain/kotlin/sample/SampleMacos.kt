@@ -15,12 +15,6 @@ fun main() {
     }
 }
 
-class View {
-    init {
-        ViewModel()
-    }
-}
-
 class ViewModel : CoroutineScope {
     private val job = Job()
     override val coroutineContext = Dispatchers.Main + job + CoroutineExceptionHandler { _, e -> println(e) }
